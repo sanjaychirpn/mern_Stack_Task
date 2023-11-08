@@ -1,0 +1,67 @@
+body{
+    background-image: url(../assets/images/OIP.jpeg);
+
+    background-color: #0a0909;
+    color: white;
+    font-family: 'Tilt', sans-serif;
+    display: flex;
+    min-height: 100dvh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container{
+    padding: 20px 80px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+content{
+    display: flex;
+}
+p{
+    margin: 70px;
+}
+h4{
+   text-align: center;
+}
+
+.aboutMe{
+    padding: 50px 0px;
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.aboutMe img{
+    width: 300px;
+    height: 300px;
+}
+footer{
+    padding: 20px;
+    background-color: darkgrey;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icons{
+    display: flex;
+    column-gap: 10px;
+}
+
+.social-icons a img{
+    width: 50px;
+    height: 50px;
+}
+
+.zoom-me{
+    transition-duration: 500ms;
+    font-size: 20px;
+}
+.zoom-me:hover{
+    transform: scale(1.5);
+    font-size: 30px;
+}

@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Tilt Neon';
+    src: url(../fonts/TiltNeon-Regular.ttf);
+}
+
+body{
+    background-image: url(../assets/images/OIP.jpeg);
+
+    background-color: rgb(61, 43, 43);
+    color: white;
+    font-family: 'Tilt', sans-serif;
+    display: flex;
+    min-height: 100dvh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container{
+    padding: 20px 80px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menus a{
+   padding-left: 10px; 
+}
+
+
+.aboutMe{
+    padding: 50px 0px;
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.aboutMe img{
+    width: 150px;
+    height: 150px;
+    border-radius: 99999px;
+}
+
+footer{
+    padding: 20px;
+    background-color: darkgrey;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icons{
+    display: flex;
+    column-gap: 10px;
+}
+
+.social-icons a img{
+    width: 50px;
+    height: 50px;
+}
+
+.zoom-me{
+    transition-duration: 500ms;
+    font-size: 20px;
+}
+.zoom-me:hover{
+    transform: scale(1.5);
+    font-size: 30px;
+}

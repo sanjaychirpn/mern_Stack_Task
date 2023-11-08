@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On click change</title>   
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+       .heading{
+        display: flex;
+        }
+        button{
+            flex-direction: column;
+            height: 30px;
+            width: 100px;
+            margin-left: 95px;
+            padding-top: 5px;
+            padding-left: 15px;
+            margin-top: 20px;
+            background-color:aliceblue;
+        }
+    </style> 
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="heading">
+                <h1 id="h1">Books are generally divided into three sections: front matter, principal text</h1>
+                <h2 id="h2">Books are generally divided into three sections: front matter, principal text</h2>
+                <h3 id="h3">Books are generally divided into three sections: front matter, principal text</h3>
+                <h4 id="h4">Books are generally divided into three sections: front matter, principal text</h4>
+                <h5 id="h5">Books are generally divided into three sections: front matter, principal text</h5>
+                <h6 id="h6">Books are generally divided into three sections: front matter, principal text</h6>
+            </div>
+            <div class="button">
+                <button onclick="changeText('h1', 'blue','30')">Heading 1</button>
+                <button onclick="changeText('h2','purple','25')">Heading 2</button>
+                <button onclick="changeText('h3','green','20')">Heading 3</button>
+                <button onclick="changeText('h4','orange','15')">Heading 4</button>
+                <button onclick="changeText('h5','red','10')">Heading 5</button>
+                <button onclick="changeText('h6','gray')">Heading 6</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function changeText(id,color,size){
+        document.getElementById(id).style.color = `${color}`; 
+        document.getElementById(id).style.fontSize = `${size}px`; 
+    }
+</script>   
+
