@@ -1,123 +1,145 @@
 *{
-    margin: 0;
-    padding: 0;
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    text-transform: capitalize;
 }
-body{
-    background-color: rgba(36,87,196,255);   
-}
-
-.main{
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    height: 400px;
+html, body{
+    min-height: 100% !important;
 }
 .container{
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;   
+    background-color: rgba(36,87,196,255);   
+}
+.row{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .form{
-    margin-top:50px;
-    width: 300px;
-    height: 480px;
-    background-color: white;
-    color: #000;
-    border-radius: 10px;
-    padding: 25px;
-    margin-left: 450px;
-}
-
-.form h2{
-    width: 220px;
-    font-family: sans-serif;
+    max-width: 350px;    
     text-align: center;
-    color:black;
-    font-size: 27px;
-    background-color: #fff;
     border-radius: 10px;
-    margin: 2px;
-    padding: 8px;
-    padding-left: 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 6px 0px;
+    background-color: white !important;
+    padding: 20px;
+}   
+.heading h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color:#414548;
 }
-
-.form input{
-    width: 290px;
-    height: 35px;
-    color:black;
-    font-size: 15px;
-    letter-spacing: 1px;
-    margin-top: 30px;
-    font-family: sans-serif;
-    border: 1px solid rgb(220, 202, 202);
-    padding-left: 3px;
+.login{
+    margin: 30px 0px;
 }
-.forgetpass{
-    text-align: center;
-    padding-top: 15px;}
-.forgetpass a{
+.formInput{
+    width: 100%;
+    border-radius: 5px;
+    border: 0.5px solid #d9d8d8;
+    padding: 11px;
+    margin: 10px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 6px 0px;
+}
+.formInput::placeholder{
+    color: #9c9c9c;
+}
+.login a{
+    color: #0e7ee0;
     text-decoration: none;
-    color: #3463bb;
-
+    font-size: 14px;
+    font-weight: 500;
 }
-.link{
-    margin-top: 10px;
-    display: flex;
-    padding-left: 30px;
+.login p{
+    color: #7c7d80; 
+    font-size: 14px;
 }
-.link a{
-    margin-left: 3px;
-    color: #3463bb;
-    text-decoration: none;
-
+.inputGroup{
+    position: relative;
 }
-.borderOr{
-    margin: 18px 0px;
-   font-size: 18px !important;
-   display:flex;
+.eyeIcon{
+    color: #7c7d80;
+    position: absolute;
+    top: 30%;
+    right: 7%;
 }
-.borderOr::before, .borderOr::after {
-   color:white;
-   content:'';
-   flex:1;
-   border-bottom:groove 1px #efefef;
-   margin: auto 10px;
-   box-shadow: 0 -2px;
+.Submit{
+    background-color:rgb(47, 47, 225);
+    color: white;
+    width: 100%;
+    border: 1px solid transparent;
+    margin: 14px 0px;
+    border-radius: 5px;
+    padding: 11px;
+    transition: 0.3s;
+    
 }
-.btnn, .loginfb{
-    width: 290px;
-    height: 40px;
-    background-color: rgba(2,114,217,255);
-    border: none;
-    margin-top: 30px;
-    font-size: 18px;
-    border-radius: 10px;
+.Submit:hover{
+    color: rgba(2,114,217,255);
+    background-color: transparent;
+    border: 1px solid rgba(2,114,217,255);
     cursor: pointer;
-    color: #fff;
-    font-weight: bold; 
-  
 }
-.loginfb{
-    background-color: #3468bb; 
+.beforeOR{
+    margin: 18px 0px;
+    font-size: 18px;
+    display:flex;
+
 }
-.btnn a{
-    text-decoration: none;
-    color:#fff;
+.beforeOR::before, .beforeOR::after {
+    color:white;
+    content:'';
+    flex:1;
+    border-bottom:groove 1px rgb(220, 214, 214) !important;
+    margin: auto 10px;
+    box-shadow: 0 -2px;
+}
+.Socialmediaicon button{
+    width: 100%;
+    margin: 8px 0px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    text-transform: capitalize;
+    line-height: 37px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.Socialmediaicon button i{
+    float: left;
+    font-size: 30px;
+    line-height: 37px;
+    margin-left: 10px;
+}
+.Socialmediaicon button i img{
+    width: 21px;
+    object-fit: contain;
+}
+.fbButton{
+    background-color: #0b50c0; 
+    color: white;
     font-weight: bold;
 }
-
-.logingoogle{
-    color: #b2b1b6;
+.googleButton{
+    color: #9790b3;
+    font-weight: bold;
     background-color: transparent;
-    border: 1px solid #eeeeee;
-    width: 290px;
-    height: 40px;
-    margin-top: 10px;
-    padding-top: 10px;
+    border: 1px solid rgb(220, 214, 214) !important;
 }
-.button i{
+input:invalid {
+    border: 1px solid red;
+  }
+ .error{
+    color: red;
+    font-size: 10px;
     float: left;
-    margin-left: 8px;
-    font-size: 25px;
+ }
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
 }
-
-
-

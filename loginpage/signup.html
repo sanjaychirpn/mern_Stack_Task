@@ -3,29 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/assets/css/signup.css" rel="stylesheet">
-    <title>SignUp Page</title>
+    <title>SignUp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/assets/css/login.css">
 </head>
-
 <body>
-    <div class="form">
-        <h2>Signup</h2>
-        <input type="email" name="email" placeholder="Enter Email Here">
-        <input type="password" name="" placeholder="Create password">
-        <input type="password" name="" placeholder="Confirm Password">
-        <button class="btnn"><a href="#">Signup</a></button>
-
-        <p class="link">Already have an account?
-        <a href="#">Login </a></p>
-        <p class="borderOr">Or</p>
-
-        <div class="button">
-            <button class="loginfb"><span><i class='bx bxl-facebook-circle' ></i></span>login with facebook</button>
-            <button class="logingoogle"><i><img src="/assets/image/Google__G__Logo.svg"></i>login with Google</button>
+    <div class="container">
+        <div class="row">
+            <div class="form">
+                <div class="heading">
+                    <h2>SignUp</h2>
+                </div>
+                <div class="login">
+                    <form action="">
+                        <input type="email" class="formInput" placeholder="Email">
+                        <input type="password" class="formInput" placeholder="Create Password">  
+                        <div class="inputGroup">
+                            <input type="password" class="formInput" placeholder="Confirm Password">  
+                            <button><i class='bx bx-low-vision eyeIcon'></i></button>
+                        </div>
+                        <input type="submit" value="Signup" class="Submit">
+                        <p>Already have an Account? <a href="">Login</a></p>                      
+                        
+                    </form>
+                    <p class="beforeOR">or</p>
+                    
+                </div>
+                <div class="Socialmediaicon">
+                    <button class="fbButton"><span><i class='bx bxl-facebook-circle' ></i></span>login with facebook</button>
+                    <button class="googleButton"><i><img src="/assets/image/Google__G__Logo.svg"></i>login with Google</button>
+                </div>
+            </div>
         </div>
-
-
-
     </div>
 </body>
-</html>    
+</html>
