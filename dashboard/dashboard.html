@@ -1,131 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/x-icon" href="" />
+
+    <!-- Box Icon  -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link href="/assest/css/dashboard.css" rel="stylesheet">
- 
-    <title>Dashboard Design</title>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="icon">
-                <i><img src="/assest/images/Bell.svg"></i>
-                <i><img src="/assest/images/Question mark circle.svg"></i>
-                <i><img src="/assest/images/Cog settings.svg"></i>
-                <i><img src="/assest/images/Avatar w. photo.png"></i>
-              </div>
-              <div class="icons">
-                <i class="fourdots"><img src="/assest/images/View grid.svg"></i>
-                <i><img src="/assest/images/Fire.svg"></i>
-              </div>
-        </div>
-        <div class="main">
-        <div class="sidenav">
-            <div class="name">
-                <i class="atdirect"><img src="/assest/images/At symbol.svg" height="22px"></i>
-                <a href="#"><p class="names"> Lalita menaria<br>
-                  <span class="intro">Full stack developer</span>
-                </p>   </a>    
-              </div>
-              <div class="projecticon">
-                <i class="pro"><img src="/assest/images/Newspaper.svg" height="14px"></i>
-               <a href="#"><p class="project">Projects</p></a>
-              </div> 
-              <div class="boardicon">
-                <i class="bod"><img src="/assest/images/View boards.svg" height="14px"></i>
-                <a href="#"><p class="board">Board</p></a>
-              </div>
-              <div class="reporticon">
-                <i class="errow"><img src="/assest/images/Trending up.svg" height="14px"></i>
-                <a href="#"><p class="report">Reports </p></a>
-              </div>
-        </div>
 
-        <div class="Dashboard">
-         <div class="breadcumbs">
-          <li>Projects ></li>
-          <li>Web Development ></li>
-          <li class="Design">Design  Board </li>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=EB+Garamond&family=Inter:wght@300;400&family=Poppins:ital,wght@0,300;0,600;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="navbar">
+        <div class="navleft">
+          <button><i class="bx bxs-grid-alt"></i></button>
+          <button><i class="bx bxs-hot"></i></button>
         </div>
-          <div class="designboard">
-            <h4>Design Board</h4>
-            <button onclick="openForm()">Add New Task</button>
-            <div class="form-popup" id="myForm">
-              <form action="" class="form-container">
-                <h5>Add New Task</h5>
-            
-                <label for="addtask"><b>Add New Task</b></label>
-                <input type="text" placeholder="Enter Task" name="newtask" required>
-            
-                <div class="buttons">
-                <button type="submit" class="btn">Add</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-              </div>
-              </form>
+        <div class="navright">
+          <button><i class="bx bxs-bell"></i></button>
+          <button><i class="bx bx-question-mark"></i></button>
+          <button><i class="bx bxs-cog"></i></button>
+          <img src="/assets/images/user.png" alt="user" class="userImg" />
+        </div>
+      </div>
+      <div class="main">
+        <!--flex-->
+        <div class="sidebar">
+          <!-- user name etc -->
+          <div class="user">
+            <div class="userIcon">
+              <img src="/assets/images/userIcon.svg" />
+            </div>
+            <div class="userName">
+              <h6>Chirag Joshi</h6>
+              <p>Full stack developer</p>
             </div>
           </div>
-
-          <div class="boards">
-
-            <div class="board1">
-               
-                <b>TO DO</b>
-                <p>As a translator, i want to integrate crowdin
-                  webhook to no ify translators about changed strings.<br>
-                  <i class="refactoring"><img src="/assest/images/Title.svg"></i>
-
-                </p> <p>As a user i want to see actual overusage price for
-                   next download</p>
-                   <p>As team license owner, i want to implemented limits</p>
-                   <p>Font SCSS mixin does not recognise fallback for font-family</p>
-                  <p>Interate nuxt-18 in product-developers project<br>
-                    <i class="refactoring"><img src="/assest/images/Title.svg"></i>
-                  </p>
-              </div>
-              <div class="board2">
-               
-                <b>IN PROGRESS</b>
-                <p>As an external contributor, i want to able to see status of uploaded materials</p>
-                  <p>Replace justcomment with something</p>
-                  <p>As menual license user i want to see my limits</p>
-                 <p>Create a storage to store common translation<br>
-                  <i class="refactoring"><img src="/assest/images/Title.svg"></i>
-                 </p>
-                <p>CLONE-As an external contributor, i want to be
-                   able to upload a zip of my original materials</p>
-                  <p>As a contributor, i want new calculation algorithm for my eamings</p>
-      
-              </div>
-              <div class="board3">
-               
-                <b>DONE</b>
-                <p>As a user, i want to access intercom help center, so that i am not confused by crisp</p>
-                  <p>Remove request to ipfy service from frontend</p> 
-      
-              </div>
-           </div>
+          <div class="menu">
+            <ul class="menuOptions">
+              <li>
+                <a href="">
+                  <i class="bx bxs-news"></i>
+                  <span>Projects</span>
+                </a>
+              </li>
+              <li class="menuActive">
+                <a href="">
+                  <i class="bx bxs-bar-chart-alt-2"></i>
+                  <span>Board</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="bx bx-trending-up"></i>
+                  <span>Reports</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-         
-        
-
+        <div class="content">
+          <div class="breadcrumb">
+            <a href="#">Projects ></a>
+            <a href="#">Web development ></a>
+            <a>Design board</a>
+          </div>
+          <!-- flex :- heading and button -->
+          <div class="dashHeading">
+            <h2>Design board</h2>
+            <button>Add New Task</button>
+          </div>
+          <!-- flex : - wrap -->
+          <div class="lists">
+            <div>
+              <h6>todo</h6>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Inventore deleniti hic in velit, nisi,
+                  <span class="status"> refactoring </span>
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Inventore deleniti hic in velit, nisi,
+                  <span class="status"> refactoring </span>
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Inventore deleniti hic in velit, nisi,
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h6>in progress</h6>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  <span class="status"> refactoring </span>
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Inventore deleniti hic in velit, nisi,
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h6>done</h6>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Inventore deleniti hic in velit, nisi,
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Inventore deleniti hic in velit, nisi,
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
+  </body>
+  <!-- <script>
+    window.addEventListener("scroll", reveal);
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
 
-    <script>
-      function openForm() {
-        document.getElementById("myForm").style.display = "block";
+      for (var i = 0; i < reveals.length; i++) {
+        var windowheigh = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top();
+        var revealpoint = 150;
+
+        if (revealtop < windowheigh - revealpoint) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
       }
-      
-      function closeForm() {
-        document.getElementById("myForm").style.display = "none";
-      }
-      </script>
-</body>
+    }
+  </script> -->
 </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="parent">
+        <div class="container">
+            <div class="row">
+                <div class="form">
+                    <div class="heading">
+                        <h2>Login</h2>
+                    </div>
+                    <div class="inputs">
+                        <form id="myForm" action="" onsubmit="return validateForm();">
+                            <input type="text" id="emailInput" class="formInput" placeholder="Email">
+                            <span id="emailError" class="error-message"></span>
+                            <div class="inputGroup">
+                                <input type="password" id="passwordInput" class="formInput" placeholder="Password">
+                                <span id="passwordError" class="error-message"></span>
+                                <button type="button" id="eyeButton" onclick="togglePasswordVisibility()"><i id="toggleEyeIcon" class='bx bx-low-vision eyeIcon'></i></button>
+                            </div>                             
+                            <a href="" class="forgotPassword">forgot password?</a>
+                            <input type="submit" value="Login" class="btnSubmit">
+                            <p>Dont have an Account? <a href="">Signup</a></p>                      
+                            
+                        </form>
+                        <p class="beforeOR">or</p>
+                        
+                    </div>
+                    <div class="buttons">
+                        <button class="fbbtn"><span><i class='bx bxl-facebook-circle' ></i></span>login with facebook</button>
+                        <button class="googlebtn"><i><img src="assets/images/Google__G__Logo.svg.png"></i>login with Google</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function togglePasswordVisibility() {
+        var password = document.getElementById("passwordInput");
+        var eyeIcon = document.getElementById("toggleEyeIcon");
+        if(password.type == "password"){
+            password.type = "text";
+        }else{
+            password.type = "password";
+        }
+    }
+    function validateForm() {
+        var email = document.getElementById("emailInput").value;
+        var password = document.getElementById("passwordInput").value;
+        var emailError = document.getElementById("emailError");
+        var passwordError = document.getElementById("passwordError");
+
+        // Basic email validation (you can use a regular expression for more thorough validation)
+        if (!email || !email.includes('@')) {
+           
+            emailError.textContent = "Invalid email address.";
+            emailError.style.display = "block";
+            document.getElementById('emailInput').classList.add("invalid-input");
+
+            return false;
+        }else{
+            emailError.style.display = "none";
+            document.getElementById('emailInput').classList.remove("invalid-input");
+        }
+
+        // Basic password validation (you can add more rules as needed)
+        if (!password || password.length < 6) {
+
+            passwordError.textContent = "Password must be at least 8 characters long.";
+            passwordError.style.display = "block";
+            document.getElementById("passwordInput").classList.add("invalid-input");
+
+            return false;
+        }else{
+            passwordError.style.display = "none";
+            document.getElementById("passwordInput").classList.remove("invalid-input");
+        }
+
+        // If both email and password are valid, the form will submit
+        return true;
+    }
+    // document.getElementById("myForm").addEventListener("submit", function (e) {
+    //     if (!validateForm()) {
+    //         e.preventDefault(); // Prevent form submission if validation fails
+    //     }
+    // });
+</script>
+<!-- eye icon -->

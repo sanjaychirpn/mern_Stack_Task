@@ -1,0 +1,145 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    text-transform: capitalize;
+}
+html, body, .parent{
+    min-height: 100% !important;
+}
+.container{
+    min-height: 100vh !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+    background-color: rgba(36,87,196,255);   
+}
+.row{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    max-width: 400px;    
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 6px 0px;
+    background-color: white !important;
+    padding: 20px;
+}   
+.heading h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color:#414548;
+}
+.inputs{
+    margin: 30px 0px;
+}
+.formInput{
+    width: 100%;
+    border-radius: 5px;
+    border: 0.5px solid #d9d8d8;
+    padding: 11px;
+    margin: 10px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 6px 0px;
+}
+.formInput::placeholder{
+    color: #9c9c9c;
+}
+.inputs a{
+    color: #a4c4e0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+.inputs p{
+    color: #7c7d80; 
+    font-size: 14px;
+}
+.inputGroup{
+    position: relative;
+}
+.eyeIcon{
+    cursor: pointer;
+    color: #7c7d80;
+    position: absolute;
+    top: 29%;
+    right: 7%;
+}
+.btnSubmit{
+    background-color: rgba(2,114,217,255);
+    color: white;
+    width: 100%;
+    border: 1px solid transparent;
+    margin: 14px 0px;
+    border-radius: 5px;
+    padding: 11px;
+    transition: 0.3s;
+    
+}
+.btnSubmit:hover{
+    color: rgba(2,114,217,255);
+    background-color: transparent;
+    border: 1px solid rgba(2,114,217,255);
+    cursor: pointer;
+}
+.beforeOR{
+    margin: 18px 0px;
+    font-size: 18px !important;
+    display:flex;
+
+}
+.beforeOR::before, .beforeOR::after {
+    color:white;
+    content:'';
+    flex:1;
+    border-bottom:groove 1px #efefef;
+    margin: auto 10px;
+    box-shadow: 0 -2px;
+}
+.buttons button{
+    width: 100%;
+    margin: 8px 0px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    text-transform: capitalize;
+    line-height: 37px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.buttons button i{
+    float: left !important;
+    font-size: 30px;
+    line-height: 37px;
+    margin-left: 10px;
+}
+.buttons button i img{
+    width: 21px;
+    object-fit: contain;
+}
+.fbbtn{
+    background-color: #3468bb; 
+    color: white;
+}
+.googlebtn{
+    color: #b2b1b6;
+    background-color: transparent;
+    border: 1px solid #eeeeee !important;
+}
+.error-message{
+    float: left !important;
+    display: none;
+    color: red;
+    font-size: 9px;
+}
+.invalid-input {
+    border: 0.5px solid red; /* Add a red border for invalid input */
+}
+@media only screen and (min-width: 321px) and (max-width:600px) {
+    .row{
+        margin: 0px 10px;
+    }
+}

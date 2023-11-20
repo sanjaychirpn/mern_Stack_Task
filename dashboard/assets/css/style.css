@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+.parent {
+    height: 100vh;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 50px;
+    align-items: center;
+    border: 0.5px solid #e5e9eb;
+}
+.navleft,
+.navright {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+}
+.navright {
+    justify-content: end;
+}
+.navbar button {
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    margin: 0px 06px;
+    cursor: pointer;
+}
+.navbar button i {
+    font-size: 20px;
+}
+
+.navbar .navright button i {
+    color: #5b6871;
+}
+.navright button:nth-child(2) i {
+    background-color: #5b6871;
+    color: white !important;
+    border-radius: 50%;
+}
+.userImg {
+    margin: 0px 06px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navleft button:nth-child(1) {
+    color: #3300ff;
+}
+.navleft button:nth-child(2) {
+    color: #f76659;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sidebar {
+    background-color: #f6f8f9;
+    min-width: 20%;
+    width: 20%;
+    height: 100vh;
+}
+.user {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    /* justify-content: space-around; */
+}
+.userIcon {
+    margin-right: 12px;
+}
+.userName h6 {
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.084px;
+}
+.userName p {
+    color: #84919a;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+    text-transform: capitalize;
+}
+.menuOptions {
+    list-style: none;
+    margin: 0px 28px;
+}
+.menuOptions li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.menuOptions li a i {
+    color: #84919a;
+    font-size: 24px;
+    margin: 10px 20px;
+}
+.menuOptions li a span {
+    color: #252c32;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: -0.084px;
+}
+.menuOptions li:hover {
+    background-color: #d7edff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.menuOptions li:hover a i,
+.menuOptions li:hover a span {
+    color: #4094f7;
+}
+
+.menuOptions li.menuActive {
+    background-color: #d7edff;
+    border-radius: 5px;
+}
+.menuOptions li.menuActive i,
+.menuOptions li.menuActive span {
+    color: #4094f7;
+}
+.content {
+    padding: 17px 27px;
+    min-width: 80%;
+    border: 0.5px solid #e5e9eb;
+}
+.breadcrumb {
+    padding: 0px 0px 12px 0px;
+    text-transform: capitalize;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: #6e7c87;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+}
+.breadcrumb a:last-child {
+    color: #252c32;
+}
+.dashHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashHeading h2 {
+    text-transform: capitalize;
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: 0.456px;
+}
+.dashHeading button {
+    cursor: pointer;
+    padding: 7px;
+    border: none;
+    border-radius: 6px;
+    background: #4094f7;
+    color: white;
+    font-size: 10px;
+}
+.lists {
+    display: flex;
+    align-items: stretch;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+}
+.lists div {
+    min-width: 30%;
+    width: 30%;
+    border-radius: 6px;
+    background: #f6f8f9;
+    margin: 17px 10px 0px 0px;
+    padding: 10px;
+}
+.lists div h6 {
+    color: #6e7c87;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.lists div ul {
+    list-style: none;
+    margin: 10px 0px;
+}
+.lists div ul li {
+    padding: 20px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow:
+        0px 1px 2px 0px rgba(91, 104, 113, 0.32),
+        0px 0px 1px 0px rgba(26, 32, 36, 0.32);
+    font-size: 12px;
+    color: #252c32;
+    font-family: Inter;
+    font-style: normal;
+    margin: 7px 0px;
+}
+.status {
+    display: block;
+    width: fit-content;
+    font-family: Inter;
+    font-style: normal;
+    color: #835101;
+    font-weight: bold;
+    border-radius: 4px;
+    background: #f8dd4e;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
