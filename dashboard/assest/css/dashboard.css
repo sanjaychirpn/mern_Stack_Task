@@ -1,8 +1,10 @@
 
-body{    background-color: #DEDEDE;
+body{   
          justify-content: center;
          align-items: center;
          display: flex;
+         font-family: 'Poppins', sans-serif;
+         box-sizing: border-box;
 }
 .container{
     height: auto;
@@ -28,7 +30,7 @@ body{    background-color: #DEDEDE;
 
 }
 .icons img{
-    height:15px;
+    height: 15px;
     padding-left: 10px;
     padding-top: 10px;
     column-gap: normal;
@@ -90,9 +92,13 @@ body{    background-color: #DEDEDE;
   font-weight: bold;
   padding-left: 15px;
   padding-top: 10px;
+  width: 140px;
+  margin-left: 12px;
+  margin-top: 5px;
 }
 .name:hover{
     background-color: #b5e2ff;
+    border-radius: 5px;
 }
 .intro{
   font-size: 10px;
@@ -103,9 +109,12 @@ body{    background-color: #DEDEDE;
   font-size: 12px;
   padding-top: 0px;
   padding-left: 15px;
+  width: 140px;
+  margin-left: 12px;
 }
 .projecticon:hover, .boardicon:hover, .reporticon:hover{
     background-color: #b5e2ff;
+    border-radius: 5px;
 
 }
 .reporticon{
@@ -195,3 +204,50 @@ a{
     border-radius: 6px;
     line-height: 35px;
 }
+    .form-popup {
+        display: none;
+        position: fixed;
+        bottom: 20;
+        right: 15px;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+      }
+      .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+      }
+      .form-container input[type=text]{
+        width: 90%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+      }
+      
+      .form-container input[type=text]:focus{
+        background-color: #ddd;
+        outline: none;
+      }
+      .form-container .btn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+        display: flex;
+      }
+      .buttons{
+        display: flex;
+        column-gap: 20px;
+
+      }
+      .form-container .cancel {
+        background-color: red;
+      }
+      .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+      }

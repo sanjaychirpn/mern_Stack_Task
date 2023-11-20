@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link href="/assest/css/dashboard.css" rel="stylesheet">
+ 
     <title>Dashboard Design</title>
 </head>
 <body>
@@ -55,7 +56,20 @@
         </div>
           <div class="designboard">
             <h4>Design Board</h4>
-            <button>Add New Task</button>
+            <button onclick="openForm()">Add New Task</button>
+            <div class="form-popup" id="myForm">
+              <form action="" class="form-container">
+                <h5>Add New Task</h5>
+            
+                <label for="addtask"><b>Add New Task</b></label>
+                <input type="text" placeholder="Enter Task" name="newtask" required>
+            
+                <div class="buttons">
+                <button type="submit" class="btn">Add</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              </div>
+              </form>
+            </div>
           </div>
 
           <div class="boards">
@@ -103,5 +117,15 @@
 
     </div>
     </div>
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+      </script>
 </body>
 </html>
